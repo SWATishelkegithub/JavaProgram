@@ -1,1 +1,34 @@
-# JavaProgram
+import java.util.Scanner;
+
+public class NameFormatter {
+    public static void printName(String name) {
+        
+        name = name.trim();
+       
+        
+        String[] names = name.split("\\s+");
+        String firstName = names[0];
+        String lastName = names[1];
+       
+        
+        String formattedName = lastName + ", " + firstName;
+       
+        
+       System.out.println("Formatted name: " + formattedName);
+    }
+
+    public static void main(String[] args) {
+        
+        Scanner scanner = new Scanner(System.in);
+       
+        
+        System.out.print("Enter the name (format: <first name> <last name>): ");
+        String name = scanner.nextLine();
+       
+        
+        printName(name);
+       
+        
+        scanner.close();
+    }
+}
